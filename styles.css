@@ -1,0 +1,39 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    opacity: 1;
+    transition: opacity 2s;
+    pointer-events: none; /* Отключаем все взаимодействия с интро-экраном */
+    z-index: 2; /* Убедитесь, что интро на самом верху */
+}
+
+#intro-screen.hidden {
+    opacity: 0;
+}
+
+#main-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#main-content.visible {
+    display: block;
+    opacity: 1;
+}
